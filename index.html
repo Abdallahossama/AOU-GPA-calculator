@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AOU GPA calculator</title>
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css" />
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="lib/font-awesome/css/all.min.css" />
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Start Nav -->
+    <nav>
+      <div class="container">
+        <div class="main">
+          <img src="images/aou_logo.png" alt="" />
+          <p class="mt-2">GPA Calculator</p>
+        </div>
+      </div>
+    </nav>
+    <!-- End Nav -->
+    <!-- Start calculator -->
+    <div class="calculator">
+      <div class="container">
+        <div class="frame">
+          <p id="warning" class="text-danger"></p>
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Course Name</th>
+                <th scope="col">Credits</th>
+                <th scope="col">Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <input id="course" type="text" placeholder="Subject Title" />
+                </td>
+                <td>
+                  <input
+                    id="credits"
+                    type="text"
+                    placeholder="Credits"
+                  />
+                </td>
+                <td>
+                  <select id="grade">
+                    <option value="A">A</option>
+                    <option value="B+">B+</option>
+                    <option value="B">B</option>
+                    <option value="C+">C+</option>
+                    <option value="C">C</option>
+                    <option value="D">D</option>
+                    <option value="F">F</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <button id="btn_add" class="btn_add mt-5 me-3">
+            <i class="fa-solid fa-square-plus"></i> Add courses
+          </button>
+          <button id="minus">Remove courses</button>
+          <table class="table_display">
+            <tbody id="tbody"></tbody>
+          </table>
+            <button class="mt-4" id="calc">Calculate</button>
+          <h2 id="gpa" class="mt-5"></h2>
+        </div>
+      </div>
+    </div>
+    <!-- End calculator -->
+    <script src="main.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
